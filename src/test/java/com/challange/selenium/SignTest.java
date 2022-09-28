@@ -58,23 +58,23 @@ public class SignTest {
         List<WebElement> elems = driver.findElements(By.cssSelector(".alert.alert-danger"));
         if (elems.size() == 0) {
             System.out.println("Success Login");
-//            String expedtedURL = "http://automationpractice.com/index.php?controller=my-account";
-//            String actualURL = driver.getCurrentUrl();
-//            Assert.assertEquals(actualURL,expedtedURL,"URL expedted dan URL actual Tidak Sama");
+            String expedtedURL = "http://automationpractice.com/index.php?controller=my-account";
+            String actualURL = driver.getCurrentUrl();
+            Assert.assertEquals(actualURL,expedtedURL,"URL expedted dan URL actual Tidak Sama");
         } else {
 
             System.out.println("Faild Login");
-//            String expedtedURL = "http://automationpractice.com/index.php?controller=authentication";
-//            String actualURL = driver.getCurrentUrl();
-//            Assert.assertEquals(actualURL,expedtedURL,"URL expedted dan URL actual Tidak Sama");
-//            System.out.println("My element was found on the page");
-//            WebElement toastMessage = driver.findElement(By.cssSelector(".alert.alert-danger"));
-//            String actualMessage = toastMessage.getText();
-//            System.out.println(actualMessage);
-//            System.out.println(messageError);
-//            Assert.assertTrue(actualMessage.contains(messageError),"Actual Message Password Tidak sama dengan Expected Message");
+            String expedtedURL = "http://automationpractice.com/index.php?controller=authentication";
+            String actualURL = driver.getCurrentUrl();
+            Assert.assertEquals(actualURL,expedtedURL,"URL expedted dan URL actual Tidak Sama");
+            System.out.println("My element was found on the page");
+            WebElement toastMessage = driver.findElement(By.cssSelector(".alert.alert-danger"));
+            String actualMessage = toastMessage.getText();
+            System.out.println(actualMessage);
+            System.out.println(messageError);
+            Assert.assertTrue(actualMessage.contains(messageError),"Actual Message Password Tidak sama dengan Expected Message");
 
-                   }
+        }
         sleep(3000);
         // driver.quit();
     }
