@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Login Test" verbose="1" >
+
+    <!--    <groups>-->
+    <!--        <run>-->
+    <!--            <include name="negativeTest"/>-->
+    <!--        </run>-->
+    <!--    </groups>-->
+
+    <test name="Search No Found" >
+        <parameter name="search_text" value="No Product Found"></parameter>
+        <parameter name="expedtedUrl" value="http://automationpractice.com/index.php?controller=search&amp;orderby=position&amp;orderway=desc&amp;search_query=No+Product+Found&amp;submit_search="></parameter>
+        <parameter name="messageError" value="No results were found for your search &quot;No Product Found&quot;"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.challange.selenium.SearchTest">
+                <methods>
+                    <include name="searchResutlTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Search Found" >
+        <parameter name="search_text" value="Dress"></parameter>
+        <parameter name="expedtedUrl" value="http://automationpractice.com/index.php?controller=search&amp;orderby=position&amp;orderway=desc&amp;search_query=Dress&amp;submit_search="></parameter>
+        <parameter name="messageError" value=""></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.challange.selenium.SearchTest">
+                <methods>
+                    <include name="searchResutlTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+
+</suite>

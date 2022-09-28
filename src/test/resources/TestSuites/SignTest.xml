@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Login Test" verbose="1" >
+
+
+    <test name="Sign in with invalid email address" >
+        <parameter name="username" value="privacyfans@gmail.comx"></parameter>
+        <parameter name="password" value="12345"></parameter>
+        <parameter name="errorMessage" value="There is 1 error"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.challange.selenium.SignTest">
+                <methods>
+                    <include name="loginInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Sign in with invalid password" >
+        <parameter name="username" value="privacyfans@gmail.com"></parameter>
+        <parameter name="password" value="123456"></parameter>
+        <parameter name="errorMessage" value="There is 1 error"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.challange.selenium.SignTest">
+                <methods>
+                    <include name="loginInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Sign in with valid credentials" >
+        <parameter name="username" value="privacyfans@gmail.com"></parameter>
+        <parameter name="password" value="12345"></parameter>
+        <parameter name="errorMessage" value="There is 1 error"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.challange.selenium.SignTest">
+                <methods>
+                    <include name="loginInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
